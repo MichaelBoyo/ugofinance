@@ -7,6 +7,7 @@ import {
   Container,
   Divider,
   Typography,
+  Button,
 } from "@mui/material";
 
 import { OrdersTable } from "../components/orders-table";
@@ -18,9 +19,6 @@ const stats = [
   {
     content: "Pay vendor",
   },
-  {
-    content: "Create Payment Link",
-  }
 ];
 export const Vendor = () => {
   const data = JSON.parse(localStorage.getItem("vendor"))
@@ -36,6 +34,9 @@ export const Vendor = () => {
       }, 3000);
     }
   });
+  const flw = () => {
+
+  };
 
   return (
     <>
@@ -63,7 +64,7 @@ export const Vendor = () => {
             }}
           >
             {stats.map((item) => (
-              <Grid item key={item.label} md={4} xs={12}>
+              <Grid item key={"234"} md={4} xs={12}>
                 <SummaryItem
                   content={item.content}
                   icon={item.icon}
@@ -79,6 +80,24 @@ export const Vendor = () => {
                 />
               </Grid>
             ))}
+            <Grid item key={"create Paument link"} md={4} xs={12}>
+              <SummaryItem
+                content="Create Paument link"
+                label="Create Paument link"
+                
+                button={
+                  <Button
+                    onClick={flw}
+                    aria-describedby={"p"}
+                    variant="contained"
+                  >
+                    <Typography color="" variant="h6">
+                      Create Paument link
+                    </Typography>
+                  </Button>
+                }
+              />
+            </Grid>
           </Box>
 
           <Card variant="outlined">
