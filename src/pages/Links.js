@@ -14,7 +14,7 @@ import {
   Typography,
 } from "@mui/material";
 import OneLiquidity from "./OneLiquidity";
-const companySizeOptions = ["BTC", "USDT", "ETH", "BNB"];
+const companySizeOptions = ["USD", "EUR", "GBP", "YUAN"];
 
 export default function BasicPopover({ name, myOrders, setMyOrders, setSuccessPay }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
