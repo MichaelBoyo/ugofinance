@@ -26,7 +26,7 @@ export const Navbar = () => {
           }}
         >
           <img
-            style={{ width: "200px", height: "60px" }}
+            style={{ width: "200px", height: "59px" }}
             alt="icon"
             src="https://res.cloudinary.com/dfsn2ob9s/image/upload/v1668798109/build_your_networth_8_zjoyda.png"
           />
