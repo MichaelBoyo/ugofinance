@@ -14,17 +14,17 @@ import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 const items = [
   
   {
-    href: "/",
+    href: "/dashboard",
     icon: PriceChangeIcon,
     label: "Pay a vendor",
   },
   {
-    href: "/exchange",
+    href: "/dashboard/exchange",
     icon: CurrencyExchangeIcon,
     label: "Global Transfers",
   },
   {
-    href: "/assets",
+    href: "/dashboard/assets",
     icon: BusinessCenterIcon,
     label: "Financial Assets",
   },
