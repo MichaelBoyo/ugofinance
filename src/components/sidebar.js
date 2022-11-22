@@ -36,12 +36,12 @@ const items = [
     label: "Account",
   },
   {
-    href: "/dashboard/account",
+    href: "/dashboard/credit",
     icon: WalletIcon,
     label: "Request Credit",
   },
   {
-    href: "/dashboard/account",
+    href: "/dashboard/sales",
     icon: StorefrontIcon,
     label: "Sales Dashboard",
   },

@@ -66,23 +66,23 @@ const tiers = [
       'Help center access',
       'Phone & email support',
     ],
-    buttonText: 'Contact us',
+    buttonText: 'Sign up',
     buttonVariant: 'outlined',
   },
+  // {
+  //   title: 'Currency Exchange',
+  //   price: '30',
+  //   description: [
+  //     'Swap any kind of currency',
+  //     'Fast and Secure Transactions',
+  //     '24/7 customer support',
+  //     'Phone & email support',
+  //   ],
+  //   buttonText: 'Contact us',
+  //   buttonVariant: 'outlined',
+  // },
   {
-    title: 'Currency Exchange',
-    price: '30',
-    description: [
-      'Swap any kind of currency',
-      'Fast and Secure Transactions',
-      '24/7 customer support',
-      'Phone & email support',
-    ],
-    buttonText: 'Contact us',
-    buttonVariant: 'outlined',
-  },
-  {
-    title: 'Daily newsletter',
+    title: 'Newsletter',
     price: '30',
     description: [
       'Daily Updates on Finance and the economy',
@@ -90,21 +90,21 @@ const tiers = [
       'Trending market news',
       'General updates',
     ],
-    buttonText: 'Subscribe',
+    buttonText: 'Sign up',
     buttonVariant: 'outlined',
   },
-  {
-    title: 'Discover ',
-    price: '30',
-    description: [
-      'New products and Services',
-      'Fantastic services near you',
-      'Trending technologies',
+  // {
+  //   title: 'Discover ',
+  //   price: '30',
+  //   description: [
+  //     'New products and Services',
+  //     'Fantastic services near you',
+  //     'Trending technologies',
      
-    ],
-    buttonText: 'Contact us',
-    buttonVariant: 'outlined',
-  },
+  //   ],
+  //   buttonText: 'Contact us',
+  //   buttonVariant: 'outlined',
+  // },
 ];
 
 function PricingContent() {
