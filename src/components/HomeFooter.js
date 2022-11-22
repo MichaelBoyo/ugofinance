@@ -34,11 +34,11 @@ const footers = [
   {
     title: 'Features',
     description: [
-      'Cool stuff',
-      'Random feature',
-      'Team feature',
-      'Developer stuff',
-      'Another one',
+      'payments',
+      'investing and savings',
+      'Global Transfers',
+      'Developers',
+      'Newsletter',
     ],
   },
   {
