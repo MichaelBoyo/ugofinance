@@ -1,1 +1,1 @@
-mvp for  ugofinance
+mvp for  https://ugofinance.vercel.app
