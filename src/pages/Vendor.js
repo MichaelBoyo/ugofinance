@@ -14,11 +14,13 @@ import { OrdersTable } from "../components/orders-table";
 import { SummaryItem } from "../components/reports/summary-item";
 import { Grid } from "@mui/material";
 import VendorPay from "./VendorPay";
+import PaymentLink from "./PaymentLink";
 const tableHeaders = ["Gateway", "Amount ($)", "Vendor", "Date", "Order Id"];
 const stats = [
   {
     content: "Pay vendor",
   },
+ 
 ];
 export const Vendor = () => {
   const data = JSON.parse(localStorage.getItem("vendor"))
@@ -34,9 +36,7 @@ export const Vendor = () => {
       }, 3000);
     }
   });
-  const flw = () => {
-
-  };
+  const flw = () => {};
 
   return (
     <>
@@ -80,21 +80,16 @@ export const Vendor = () => {
                 />
               </Grid>
             ))}
-            <Grid item key={"create Paument link"} md={4} xs={12}>
+            <Grid item key={"234"} md={4} xs={12}>
               <SummaryItem
-                content="Create Paument link"
-                label="Create Paument link"
-                
+                content="Create Payment Link"
                 button={
-                  <Button
-                    onClick={flw}
-                    aria-describedby={"p"}
-                    variant="contained"
-                  >
-                    <Typography color="" variant="h6">
-                      Create Paument link
-                    </Typography>
-                  </Button>
+                  <PaymentLink
+                    myOrders={myOrders}
+                    setMyOrders={setMyOrders}
+                    name="Create Payment Link"
+                    setSuccessPay={setSuccessPay}
+                  />
                 }
               />
             </Grid>
