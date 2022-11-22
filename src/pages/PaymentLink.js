@@ -184,19 +184,6 @@ export default function BasicPopover({
                     error={Boolean(formik.touched.phone && formik.errors.phone)}
                     fullWidth
                     helperText={formik.touched.phone && formik.errors.phone}
-                    label="Phone No Call"
-                    name="phone"
-                    onBlur={formik.handleBlur}
-                    onChange={formik.handleChange}
-                    value={formik.values.phone}
-                    variant="outlined"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    error={Boolean(formik.touched.phone && formik.errors.phone)}
-                    fullWidth
-                    helperText={formik.touched.phone && formik.errors.phone}
                     label="Phone No Whatsapp"
                     name="phone"
                     onBlur={formik.handleBlur}
@@ -205,36 +192,9 @@ export default function BasicPopover({
                     variant="outlined"
                   />
                 </Grid>
+                
 
-                <Grid item xs={12}>
-                  <TextField
-                    error={Boolean(
-                      formik.touched.transactionType &&
-                        formik.errors.transactionType
-                    )}
-                    fullWidth
-                    helperText={
-                      formik.touched.transactionType &&
-                      formik.errors.transactionType
-                    }
-                    label="Vendor"
-                    name="vendor"
-                    onBlur={formik.handleBlur}
-                    onChange={formik.handleChange}
-                    select
-                    value={formik.values.vendor}
-                    variant="outlined"
-                  >
-                    {vendor.map((transactionTypeOption) => (
-                      <MenuItem
-                        key={transactionTypeOption}
-                        value={transactionTypeOption}
-                      >
-                        {transactionTypeOption}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                </Grid>
+                
                 {formik.errors.submit && (
                   <Grid item xs={12}>
                     <FormHelperText error>
