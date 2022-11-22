@@ -176,13 +176,13 @@ export default function TemporaryDrawer() {
                   >
                     OFFLINE MVP
                   </Button>
-                  <Button
+                  {/* <Button
                     onClick={() => navigate("/register")}
                     variant="contained"
                     
                   >
                     Sign Up
-                  </Button>
+                  </Button> */}
                   <Button onClick={() => navigate("/login")} variant="outlined">
                     Login
                   </Button>
