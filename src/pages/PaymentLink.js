@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-
+import axios from "axios";
 import {
   Box,
   Button,
@@ -9,7 +9,6 @@ import {
   Card,
   FormHelperText,
   Grid,
-  MenuItem,
   TextField,
   Typography,
 } from "@mui/material";
@@ -23,6 +22,13 @@ const vendor = [
   "Kiki Fabics",
   "Joels Exchange",
 ];
+const paymentlink = axios.create({
+  baseURL: "https://api.flutterwave.com/v3/payments",
+  headers: {
+    Authorization: `Bearer ${process.env.REACT_APP_FLW_SECRET}`,
+  },
+  
+});
 
 export default function BasicPopover({
   name,
@@ -80,37 +86,37 @@ export default function BasicPopover({
     },
   });
   const [loading, setLoading] = React.useState(false);
-  const handleBClick = async() => {
+  const handleBClick = async () => {
+    console.log(process.env.REACT_APP_FLW_SECRET);
     setLoading(true);
-    const res = await fetch("https://api.flutterwave.com/v3/payments",{
-        method: "POST",
-        headers:{
-            Authorization: `Bearer ${process.env.REACT_APP_FLW_PUBLIC_KEY}`
-        },
-        mode: "no-cors",
-        body: JSON.stringify({
-            tx_ref: "hooli-tx-1920bbtytty",
-            amount: formik.values.amount,
-            currency: "NGN",
-            redirect_url: "https://webhook.site/9d0b00ba-9a69-44fa-a43d-a82c33c36fdc",
-            meta: {
-                consumer_id: 23,
-                consumer_mac: "92a3-912ba-1192a"
-            },
-            customer: {
-                email: formik.values.email,
-                phonenumber: formik.values.phone,
-                name: formik.values.email
-            },
-            customizations: {
-                title: "Payment Link",
-               
-            }
+    try {
+      const res = await paymentlink
+        .post("", {
+          tx_ref: "hooli-tx-1920bbtytty",
+          amount: formik.values.amount,
+          currency: "NGN",
+          redirect_url:
+            "https://webhook.site/d1d6cacb-82f2-4eb9-b995-1563a927cf71",
+          meta: {
+            consumer_id: 23,
+            consumer_mac: "92a3-912ba-1192a",
+          },
+          customer: {
+            email: formik.values.email,
+            phonenumber: formik.values.phone,
+            name: formik.values.email,
+          },
+          customizations: {
+            title: "Payment Link",
+          },
         })
-    }).catch(err => console.log(err))
-
-    console.log(res)
-  }
+        .json();
+      console.log(res);
+    } catch (err) {
+      console.log(err.code);
+      console.log(err.response.body);
+    }
+  };
 
   return (
     <div>
@@ -192,9 +198,7 @@ export default function BasicPopover({
                     variant="outlined"
                   />
                 </Grid>
-                
 
-                
                 {formik.errors.submit && (
                   <Grid item xs={12}>
                     <FormHelperText error>
@@ -216,8 +220,9 @@ export default function BasicPopover({
                     loading={loading}
                     loadingPosition="end"
                     variant="contained"
+                    disabled
                   >
-                    Send
+                    we're still working on this feature
                   </LoadingButton>
                 </Grid>
               </Grid>

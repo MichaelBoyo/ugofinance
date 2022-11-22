@@ -7,7 +7,6 @@ import {
   Container,
   Divider,
   Typography,
-  Button,
 } from "@mui/material";
 
 import { OrdersTable } from "../components/orders-table";
@@ -20,7 +19,6 @@ const stats = [
   {
     content: "Pay vendor",
   },
- 
 ];
 export const Vendor = () => {
   const data = JSON.parse(localStorage.getItem("vendor"))
@@ -36,7 +34,7 @@ export const Vendor = () => {
       }, 3000);
     }
   });
-  const flw = () => {};
+ 
 
   return (
     <>
