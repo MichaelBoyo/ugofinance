@@ -31,7 +31,7 @@ function Copyright(props) {
         }}
         to="/forgot-password"
       >
-        Koins&Kash
+        UgoFinance
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -42,7 +42,6 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignUp() {
-  
   const [emailhelper, setEmailHelper] = React.useState("");
   const [passwordhelper, setPasswordHelper] = React.useState("");
   const [validInputs, setValidInputs] = React.useState(false);
@@ -85,7 +84,7 @@ export default function SignUp() {
           returnSecureToken: true,
         })
         .catch((err) => {
-          setError(true)
+          setError(true);
           if (err.code === "ERR_NETWORK") {
             setError(!error);
             setErrorMsg("Network error");
@@ -114,13 +113,13 @@ export default function SignUp() {
             <Typography
               variant="h4"
               component="div"
-              sx={{ flexGrow: 1, fontWeight: "bold" }}
+              sx={{
+                flexGrow: 1,
+                fontWeight: "bold",
+                bgColor: "transparent",
+              }}
             >
               Welcome Back!
-            </Typography>
-
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Please login to continue
             </Typography>
           </div>
         </AppBar>
@@ -135,6 +134,13 @@ export default function SignUp() {
             alignItems: "center",
           }}
         >
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, fontWeight: "bold" }}
+          >
+            Please login to continue
+          </Typography>
           <Box
             component="form"
             noValidate
