@@ -15,9 +15,9 @@ function Copyright(props) {
       {'Copyright © '}
       <Link
         color="inherit"
-        href="https://mui.com/"
+        href="https://ugofinance.vercel.app"
       >
-        koinsandkash
+        ugofinance
       </Link>
       {' '}
       {new Date().getFullYear()}
