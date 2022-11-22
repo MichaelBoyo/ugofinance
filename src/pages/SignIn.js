@@ -85,9 +85,13 @@ export default function SignUp() {
         })
         .catch((err) => {
           setError(true);
+          console.log(err);
           if (err.code === "ERR_NETWORK") {
             setError(!error);
             setErrorMsg("Network error");
+          } else {
+            setError(!error);
+            setErrorMsg("Invalid Credentials");
           }
         });
 
