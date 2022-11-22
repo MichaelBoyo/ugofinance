@@ -6,6 +6,7 @@ import { Exchange } from "./pages/exchange";
 import Drawer from "./components/Drawer"
 import { Assets } from "./pages/Assets";
 import { Vendor } from "./pages/Vendor";
+import { Account } from "./pages/Account";
 import Home from "./pages/Home"
 import SignIn from "./pages/SignIn"
 import SignUp from "./pages/SignUp"
@@ -48,6 +49,10 @@ export const routes = [
       {
         path: "assets",
         element: <Assets />,
+      },
+      {
+        path: "account",
+        element: <Account />,
       },
 
       {

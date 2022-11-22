@@ -10,7 +10,9 @@ import {
 import PriceChangeIcon from "@mui/icons-material/PriceChange";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
-
+import WalletIcon from '@mui/icons-material/Wallet';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import PaymentsIcon from '@mui/icons-material/Payments';
 const items = [
   
   {
@@ -27,6 +29,21 @@ const items = [
     href: "/dashboard/assets",
     icon: BusinessCenterIcon,
     label: "Financial Assets",
+  },
+  {
+    href: "/dashboard/account",
+    icon: PaymentsIcon,
+    label: "Account",
+  },
+  {
+    href: "/dashboard/account",
+    icon: WalletIcon,
+    label: "Request Credit",
+  },
+  {
+    href: "/dashboard/account",
+    icon: StorefrontIcon,
+    label: "Sales Dashboard",
   },
 
 
