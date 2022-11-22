@@ -32,7 +32,7 @@ export const Exchange = () => {
   return (
     <>
       <Helmet>
-        <title>Global Transfers | Koins&Kash</title>
+        <title>Global Transfers | UgoFinance</title>
       </Helmet>
       <Box
         sx={{

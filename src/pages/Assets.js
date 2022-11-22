@@ -34,7 +34,7 @@ export const Assets = () => {
   return (
     <>
       <Helmet>
-        <title>Financial Assets | Koins&Kash</title>
+        <title>Financial Assets | UgoFinance</title>
       </Helmet>
       <Box
         sx={{

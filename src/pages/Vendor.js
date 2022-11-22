@@ -38,7 +38,7 @@ export const Vendor = () => {
   return (
     <>
       <Helmet>
-        <title>Pay A Vendor | Koins&Kash</title>
+        <title>Pay A Vendor | UgoFinance</title>
       </Helmet>
       <Box
         sx={{
