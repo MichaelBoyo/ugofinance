@@ -34,7 +34,6 @@ export const Vendor = () => {
       }, 3000);
     }
   });
- 
 
   return (
     <>
